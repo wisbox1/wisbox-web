@@ -1,8 +1,7 @@
 # Wisbox - Nearby
 
-## One Stop Solution for your Everyday Needs.
-
-### Find the Best Places near you
+One Stop Solution for your Everyday Needs.
+Find the Best Places near you
 
 # Navigate to the Unknown
 
