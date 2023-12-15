@@ -209,6 +209,13 @@ body.dark-theme {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav__logo img {
+  margin: 10px;
 }
 
 .nav__toggle {
