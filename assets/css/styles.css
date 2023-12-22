@@ -215,7 +215,11 @@ body.dark-theme {
 }
 
 .nav__logo img {
-  margin: 10px;
+  margin-right: 10px;
+}
+
+.nav__logo {
+  font-size: 1.4rem;
 }
 
 .nav__toggle {
@@ -491,7 +495,7 @@ body.dark-theme {
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 576px) {
   .svg__img {
     width: 100%;
   }
@@ -503,6 +507,21 @@ body.dark-theme {
   }
   .app__buttons {
     grid-template-columns: max-content;
+  }
+  .home__title {
+    text-align: center;
+  }
+  .home__data {
+    text-align: center;
+  }
+  .home__description {
+    text-align: center;
+  }
+  .home__data button {
+    text-align: center;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.3rem);
   }
 }
 
