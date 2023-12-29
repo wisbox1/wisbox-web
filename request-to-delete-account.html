@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/png/logo_circle.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/request_delete.css">
+    <title>Wisbox - Request to Delete/Deactivate Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo_box">
+            <div class="logo">
+                <img src="assets/img/png/logo_circle.png" alt="" srcset="">
+            </div>
+            <p class="logo_text">Wisbox</p>
+        </div>
+        <h2>Raise Account Deletion/Deactivation Request</h2>
+        <form id="request_form">
+
+            <p style="color: #000; font-size: 12px;">Please fill Account Details which was Registered*</p>
+            <div class="form-group">
+                <input type="text" required="required" id="full_name" />
+                <label for="input" class="control-label">Full Name</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" required="required" id="username" />
+                <label for="input" class="control-label">Registered Username*</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" required="required" id="reg_email" />
+                <label for="input" class="control-label">Registered Email/Phone*</label><i class="bar"></i>
+            </div>
+            <p style="color: #000; font-size: 12px;">Contact Details*</p>
+            <div class="form-group">
+                <input type="text" required="required" id="contact_email" />
+                <label for="input" class="control-label">Email</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" required="required" id="contact_phone" />
+                <label for="input" class="control-label">Phone Number</label><i class="bar"></i>
+            </div>
+            <p style="color: #000; font-size: 12px;">Reasons*</p>
+            <div class="form-group">
+                <textarea required="required" id="reason"></textarea>
+                <label for="textarea" class="control-label">Why do you wish to Leave Us? What can we improve?</label><i
+                    class="bar"></i>
+            </div>
+
+            <button class="submit_btn">Submit request</button>
+        </form>
+
+
+        <p style="color: #000; font-size: 14px;">**Note</p>
+        <p style="color: #000; font-size: 10px;">We value your privacy and Concerns, Please be assured that your
+            Account Details will be safely Deleted, meanwhile our Team would investigate on the issue and your
+            concerns. You would recieve an Email for confirmation* and after successfull execution. Thank You for
+            letting
+            us serve You.
+        </p>
+    </div>
+
+    <script src="assets/js/account_deletion.js"></script>
+
+    <script>
+        var full_name = document.getElementById("full_name");
+        var username = document.getElementById("username");
+        var reg_email = document.getElementById("reg_email");
+        var contact_email = document.getElementById("contact_email");
+        var contact_phone = document.getElementById("contact_phone");
+        var reason = document.getElementById("reason");
+
+        async function fetchInfo(e) {
+            e.preventDefault();
+            // console.log("Got it");
+            if (
+                full_name.value == "" ||
+                username.value == "" ||
+                reg_email.value == "" ||
+                contact_email.value == "" ||
+                contact_phone.value == "" ||
+                reason.value == "") {
+                alert("Please fill all the Values carefully")
+            } else {
+                let res = await postContactInfo(
+                    full_name.value,
+                    username.value,
+                    reg_email.value,
+                    contact_email.value,
+                    contact_phone.value,
+                    reason.value)
+                // console.log(res);
+            }
+        }
+        request_form.addEventListener("submit", fetchInfo);
+
+
+    </script>
+
+</body>
+
+</html>
