@@ -105,9 +105,14 @@ themeButton.addEventListener("click", () => {
 
 function truncateText() {
   var desc = document.getElementById("services__description");
-  console.log(desc.style);
-  //   desc.style.whiteSpace = "unset";
-  if (desc.style.whiteSpace == " ") desc.style.whiteSpace = "unset";
-  if (desc.style.whiteSpace == "nowrap") desc.style.whiteSpace = "unset";
-  if (desc.style.whiteSpace == "unset") desc.style.whiteSpace = "nowrap";
+  console.log(desc.style, desc.style.whiteSpace);
+  // desc.style.whiteSpace = "unset";
+  if (desc.style.whiteSpace == "") {
+    desc.style.whiteSpace = "unset";
+  } else if (desc.style.whiteSpace == "nowrap") {
+    desc.style.whiteSpace = "unset";
+  } else {
+    desc.style.whiteSpace = "nowrap";
+  }
+  // (desc.style.whiteSpace == "unset")
 }
