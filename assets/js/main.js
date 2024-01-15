@@ -103,16 +103,44 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-function truncateText() {
-  var desc = document.getElementById("services__description");
-  console.log(desc.style, desc.style.whiteSpace);
+function truncateText(title, img, desc) {
+  // var desc = document.getElementById("services__description");
+  // console.log(desc.style, desc.style.whiteSpace);
   // desc.style.whiteSpace = "unset";
-  if (desc.style.whiteSpace == "") {
-    desc.style.whiteSpace = "unset";
-  } else if (desc.style.whiteSpace == "nowrap") {
-    desc.style.whiteSpace = "unset";
-  } else {
-    desc.style.whiteSpace = "nowrap";
-  }
+  // if (desc.style.whiteSpace == "") {
+  //   desc.style.whiteSpace = "unset";
+  // } else if (desc.style.whiteSpace == "nowrap") {
+  //   desc.style.whiteSpace = "unset";
+  // } else {
+  //   desc.style.whiteSpace = "nowrap";
+  // }
   // (desc.style.whiteSpace == "unset")
+
+  let learn_more = document.getElementById("learn_more");
+  let title_up = document.getElementById("learn_more_title");
+  let img_up = document.getElementById("learn_more_img");
+  let desc_up = document.getElementById("learn_more_desc");
+  // let btn = document.getElementById("learn_more_okay");
+
+  if (((title == img) == desc) == null) {
+    learn_more.hidden = true;
+  } else {
+    title_up.innerText = title;
+    img_up.src = img;
+    desc_up.innerText = desc;
+    learn_more.hidden = false;
+  }
 }
+
+let btn = document.getElementById("learn_more_okay");
+btn.addEventListener("click", () => {
+  let learn_more = document.getElementById("learn_more");
+  learn_more.hidden = true;
+});
+
+// let body = document.querySelector("body");
+// console.log(body);
+// body.addEventListener("click", () => {
+//   let learn_more = document.getElementById("learn_more");
+//   learn_more.hidden = true;
+// });

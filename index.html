@@ -128,13 +128,15 @@
             <h2 class="section__title">Some Services We <br> Offer</h2>
             <div class="services__container grid">
                 <div class="services__data">
-                    <h3 class="services__subtitle">Payment Done</h3>
+                    <h3 class="services__subtitle">Skip the Queue with Direct Payments</h3>
 
                     <img src="assets/img/svgs/payment_pink.svg" alt="" srcset="">
 
                     <p class="desc services__description">Pay with a click at the store, No Scanning not much ado.</p>
                     <div>
-                        <a href="" class="button button-link">Learn More</a>
+                        <a class="button button-link"
+                            onclick="truncateText('Skip the Queue with Direct Payments', 'assets/img/svgs/payment_pink.svg', 'Gone are the days of fumbling with QR codes. By seamlessly connecting with stores, Wisbox ensures a swift and secure payment process, giving you more time to enjoy your shopping or hangout experience. Our seamless integration allows you to make secure payments without the need for scanning the QR. Enjoy a swift transaction process, giving you more time to immerse yourself in the local market experience.')">Learn
+                            More</a>
                     </div>
                 </div>
 
@@ -143,22 +145,26 @@
 
                     <img src="assets/img/svgs/near.svg" alt="" srcset="">
 
-                    <p class="desc services__description">We offer your favourite stores and Products right in your
+                    <p class="desc services__description">Your favourite stores and Products right in your
                         Phone.
                     </p>
                     <div>
-                        <a href="" class="button button-link">Learn More</a>
+                        <a class="button button-link"
+                            onclick="truncateText('Find the Best Near You', 'assets/img/svgs/near.svg', 'We offer your favourite stores and Products right in your Phone.')">Learn
+                            More</a>
                     </div>
                 </div>
 
                 <div class="services__data">
-                    <h3 class="services__subtitle">Navigate Shops</h3>
+                    <h3 class="services__subtitle">Navigate to Shops</h3>
 
                     <img src="assets/img/svgs/directions_pink.svg" alt="" srcset="">
 
-                    <p class="desc services__description">In our app you can navigate to unexplored Shops.</p>
+                    <p class="desc services__description">Wisbox offers you can navigate to unexplored Shops.</p>
                     <div>
-                        <a href="" class="button button-link">Learn More</a>
+                        <a class="button button-link"
+                            onclick="truncateText('Navigate to Shops', 'assets/img/svgs/directions_pink.svg', 'Wisbox offers you can navigate to unexplored Shops. Find the Best Shops on Map, navigate and Connect.')">Learn
+                            More</a>
                     </div>
                 </div>
                 <!-- </div> -->
@@ -170,9 +176,12 @@
 
                     <img src="assets/img/png/pins.png" alt="" srcset="">
 
-                    <p class="desc services__description">Pay with a click at the store, No Scanning not much ado.</p>
+                    <p class="desc services__description">Pin your favorite shops & plan for your
+                        next outing.</p>
                     <div>
-                        <a href="" class="button button-link">Learn More</a>
+                        <a class="button button-link"
+                            onclick="truncateText('Effortless Planning with Wisbox Pins', 'assets/img/png/pins.png', 'Planning your visits has never been easier. With Wisbox, you can pin your favorite shops, creating a personalized plan for your next outing. Whether you\'re planning a shopping spree or a leisurely hangout, Wisbox ensures that your experience is tailored to your preferences.')">Learn
+                            More</a>
                     </div>
                 </div>
 
@@ -181,11 +190,12 @@
 
                     <img src="assets/img/png/moment.png" alt="" srcset="">
 
-                    <p class="desc services__description">We offer your favourite stores and Products right in your
-                        Phone.
-                    </p>
+                    <p class="desc services__description">Connect directly. Wisbox is your bridge to the best local
+                        shops</p>
                     <div>
-                        <a href="" class="button button-link">Learn More</a>
+                        <a class="button button-link"
+                            onclick="truncateText('Connect Directly: Your Favorites, Just a Tap Away', 'assets/img/png/moment.png', 'Wisbox is not just an app; it\'s your bridge to the best local shops. Connect directly with your favorite stores for exclusive deals and updates. Our platform transforms the way you interact with nearby businesses, fostering a sense of community and personalized service')">Learn
+                            More</a>
                     </div>
                 </div>
 
@@ -194,18 +204,27 @@
 
                     <img src="assets/img/png/blue_discover.png" width="100%" alt="" srcset="">
 
-                    <p class="desc services__description" id="services__description">Wisbox isn't
-                        just a platform; it's your
-                        local market guide,
-                        connecting you with the products, shops, and services that matter most to you. Imagine a
-                        seamless experience where you can effortlessly discover nearby markets, explore an array of
-                        products, and connect directly with your favorite shops—all in one app.</p>
+                    <p class="desc services__description" id="services__description">Wisbox is more than a platform
+                        it's your local market guide</p>
                     <div>
-                        <a id="desc_btn" onclick="truncateText()" class="button button-link">Learn More</a>
+                        <a id="desc_btn"
+                            onclick="truncateText('Discover, Connect, Plan', 'assets/img/png/blue_discover.png', 'Wisbox is more than just a platform; it\'s your local market guide, connecting you with the products, shops, and services that matter most to you. Imagine a seamless experience where you can effortlessly discover nearby markets, explore an array of products, and connect directly with your favorite shops—all in one app.')"
+                            class="button button-link">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="learn_more" id="learn_more" hidden="true">
+            <h2 id="learn_more_title" class="learn_more_desc">Title</h2>
+            <div class="img_holder">
+                <img id="learn_more_img" src="assets/img/png/discover_connect_plan-removebg-preview.png" alt="Title">
+            </div>
+            <p id="learn_more_desc" class="learn_more_desc">
+                Description
+            </p>
+            <button class="learn_more_okay" id="learn_more_okay">Okay</button>
+        </div>
 
         <!--=============== Your Got to Market Section ===============-->
         <section class="security section container">
@@ -302,31 +321,31 @@
                 <ul class="footer__links">
                     <li><a href="https://www.linkedin.com/in/wisbox-technology-bbb4852a6/" target="_blank"
                             class="footer__link">Career</a></li>
-                    <li><a href="#" class="footer__link">Report a bug</a></li>
-                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                    <li><a class="footer__link">Report a bug</a></li>
+                    <li><a class="footer__link">Terms of Service</a></li>
                 </ul>
             </div>
 
             <div class="footer__content">
                 <h3 class="footer__title">Our Company</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Blog</a></li>
-                    <li><a href="#" class="footer__link">Our mision</a></li>
-                    <li><a href="#" class="footer__link">Get in touch</a></li>
+                    <li><a class="footer__link">Blog</a></li>
+                    <li><a class="footer__link">Our mision</a></li>
+                    <li><a class="footer__link">Get in touch</a></li>
                 </ul>
             </div>
 
             <div class="footer__content">
                 <h3 class="footer__title">Community</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Support</a></li>
-                    <li><a href="#" class="footer__link">Questions</a></li>
-                    <li><a href="#" class="footer__link">Customer help</a></li>
+                    <li><a href="mailto:help@wisbox.in" class="footer__link">Support</a></li>
+                    <li><a href="mailto:help@wisbox.in" class="footer__link">Questions</a></li>
+                    <li><a href="mailto:help@wisbox.in" class="footer__link">Customer help</a></li>
                 </ul>
             </div>
 
             <div class="footer__social">
-                <a href="#" class="footer__social-link" target="_blank"><i class='bx bxl-facebook-circle '></i></a>
+                <a class="footer__social-link" target="_blank"><i class='bx bxl-facebook-circle '></i></a>
                 <a href="https://twitter.com/Wisboxshops" target="_blank" class="footer__social-link"><i
                         class='bx bxl-twitter'></i></a>
                 <a href="https://www.instagram.com/wisbox_shops/" target="_blank" class="footer__social-link"><i

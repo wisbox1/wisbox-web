@@ -314,11 +314,11 @@ body.dark-theme {
 }
 
 /* ======Paragraph Truncate */
-.services__description {
+/* .services__description {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+} */
 
 /*=============== ABOUT ===============*/
 .about__container {
@@ -336,6 +336,64 @@ body.dark-theme {
 
 .security__data {
   text-align: center;
+}
+
+/* Learn More Pop Up */
+
+.learn_more {
+  width: 60%;
+  max-height: 80vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 100;
+  /* display: ; */
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 10px #4444;
+  overflow-y: scroll;
+}
+
+.learn_more h2 {
+  text-align: center;
+}
+
+.learn_more .img_holder {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+}
+
+.learn_more .img_holder img {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #ffd000;
+}
+
+.learn_more .learn_more_desc {
+  justify-self: center;
+  text-align: center;
+}
+
+.learn_more .learn_more_okay {
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  background: #ffd000;
+  color: #fff;
+  cursor: pointer;
+  margin: 6px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*=============== SERVICES ===============*/
@@ -519,6 +577,12 @@ body.dark-theme {
   }
   .app__buttons {
     grid-template-columns: max-content;
+  }
+  .learn_more {
+    width: 90%;
+  }
+  .learn_more .img_holder {
+    width: 60%;
   }
   .home__title {
     text-align: center;
